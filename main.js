@@ -1,0 +1,17 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+var stringUtils_1 = require("./stringUtils");
+var fs = require("fs");
+var path = require("path");
+var sentence = "If you want to do cool stuff in web development, you gotta learn Node.js!";
+var reversedSentence = (0, stringUtils_1.reverseString)(sentence);
+var characterCount = (0, stringUtils_1.countCharacters)(sentence);
+var uppercased = (0, stringUtils_1.toUpperCase)(sentence);
+console.log("Original Sentence:", sentence);
+console.log("Reversed Sentence:", reversedSentence);
+console.log("Character Count:", characterCount);
+console.log("Uppercased Sentence:", uppercased);
+var fileName = 'reversed.txt';
+fs.writeFileSync(fileName, reversedSentence, 'utf8');
+var fullPath = path.resolve(fileName);
+console.log("Full path of reversed.txt:", fullPath);

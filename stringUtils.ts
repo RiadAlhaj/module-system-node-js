@@ -3,9 +3,11 @@ export function reverseString(str: string): string {
 }
 
 export function countCharacters(str: string): number {
-  return str.length;
+  return str.replace(/\s/g,"").length;
 }
 
 export function toUpperCase(str: string): string {
   return str.toUpperCase();
 }
+
+module.exports = { reverseString, countCharacters , toUpperCase};
